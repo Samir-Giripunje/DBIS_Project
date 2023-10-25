@@ -91,17 +91,6 @@ phone_number int
 );
 
 
-create table Policy_Holder(
-pid int primary key,
-policy_id int REFERENCES Policy(policy_id),
-person_id int references Person(person_id),
-start_date Date,
-end_date   Date,
-status    varchar(20)
-);
-
-
-
 create table Employee(
 eid int primary key,
 person_id int REFERENCES Person(person_id)
