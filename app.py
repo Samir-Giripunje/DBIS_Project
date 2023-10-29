@@ -23,6 +23,7 @@ def execute_query(query):
     return result
 
 
+# ----------------------Backend Code-------------------------------------
 @app.route('/')
 def hello():
     current_route = request.path
@@ -55,9 +56,9 @@ def run_query():
                 table_html += "</table>"
                 return table_html
             else:
-                return "Query executed successfully, but there are no results to display."
+                return "<div class='alert alert-success' >Query executed successfully, but there are no results to display.</div>"
         except Exception as e:
-            return f"Error executing the query: {str(e)}"
+            return f"<div class='alert alert-danger'>Error executing the query: {str(e)}</div>"
     else:
         return "No query provided."
 

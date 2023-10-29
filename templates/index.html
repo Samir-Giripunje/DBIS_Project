@@ -1,3 +1,111 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Hello</h1>
+<style>
+  .query-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+</style>
+<div class="mt-5 query-list">
+  <div class="list-group" id="qna-container"></div>
+</div>
+<div class="mt-4">
+  <button id="qna-clear-response" class="btn btn-success">
+    Clear Response
+  </button>
+</div>
+<div id="response-render" class="table-responsive mt-4"></div>
+<script>
+  const qna = [
+    {
+      question: "Find the total coverage value for all active policies.",
+      query: "SELECT * from movie",
+    },
+    {
+      question: "Sort the agent according to the policies they sold policy",
+      query: "SELECT * from movie",
+    },
+    {
+      question: "Find the person(s) who hold the most policies.",
+      query: "SELECT * from movie",
+    },
+    {
+      question: "List the policies with entry ages between 25 and 35.",
+      query: "SELECT * from movie",
+    },
+    {
+      question: "Find the average coverage value for all active policies.",
+      query: "SELECT * from movie",
+    },
+    {
+      question:
+        "Retrieve the policies held by a specific person based on their person_id.",
+      query: "SELECT * from movie",
+    },
+    {
+      question: "List the policies that are of type 'Whole Life Plan'.",
+      query: "SELECT * from movie",
+    },
+    {
+      question:
+        "Retrieve the policies that have been claimed in the last two years.",
+      query: "SELECT * from movie",
+    },
+    {
+      question:
+        "List the policies that have a policy term of 20 years or more.",
+      query: "SELECT * from movie",
+    },
+    {
+      question:
+        "List the policies that have been active for more than five years.",
+      query: "SELECT * from movie",
+    },
+    {
+      question:
+        "Which employee is working in this branch and who is the Manager",
+      query: "SELECT * from actor",
+    },
+  ]
+
+  const queryContainer = document.getElementById("qna-container")
+  const response = document.getElementById("response-render")
+  const clear = document.getElementById("qna-clear-response")
+
+  clear.addEventListener("click", () => {
+    response.innerHTML = ""
+  })
+
+  // Loop through the qna array and create anchor tags for each object
+  qna.forEach((item, index) => {
+    const anchor = document.createElement("a")
+    anchor.href = `/sqlquery?query=${encodeURIComponent(item.query)}`
+    anchor.textContent = item.question
+    anchor.target = "_blank"
+
+    anchor.classList.add(
+      "list-group-item",
+      "list-group-item-action",
+      "list-group-item-light"
+    )
+
+    anchor.addEventListener("click", (event) => {
+      event.preventDefault() // Prevent the default behavior of clicking a link
+      // Send the GET request to the server
+      fetch(anchor.href, {
+        method: "GET",
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          response.innerHTML = data
+        })
+        .catch((error) => {
+          console.error("Error:", error)
+          response.innerHTML = "An error occurred."
+        })
+    })
+
+    // Append the anchor tag to the queryContainer
+    queryContainer.appendChild(anchor)
+  })
+</script>
 {% endblock %}
