@@ -33,8 +33,19 @@ def hello():
 @app.route('/writequeries/')
 def write():
     current_route = request.path
-    print(current_route)
     return render_template('write_queries.html', current_route=current_route)
+
+
+@app.route('/er_diagram/')
+def show_er():
+    current_route = request.path
+    return render_template('er-diagram.html', current_route=current_route)
+
+
+@app.route('/relational_schema/')
+def show_rs():
+    current_route = request.path
+    return render_template('relational_schema.html', current_route=current_route)
 
 
 @app.route('/sqlquery')

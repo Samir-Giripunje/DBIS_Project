@@ -63,19 +63,19 @@
               </div>
             </a>
             <a
-              class="nav-link {% if current_route == '' %}active{% endif %}"
-              href="#"
+              class="nav-link {% if current_route == '/er_diagram/' %}active{% endif %}"
+              href="{{ url_for('show_er') }}"
               ><div
-                class="{% if current_route == '' %}text-primary-emphasis{% endif %}"
+                class="{% if current_route == '/er_diagram/' %}text-primary-emphasis{% endif %}"
               >
                 ER Diagram
               </div>
             </a>
             <a
-              class="nav-link {% if current_route == '' %}active{% endif %}"
-              href="#"
+              class="nav-link {% if current_route == '/relational_schema/' %}active{% endif %}"
+              href="{{ url_for('show_rs') }}"
               ><div
-                class="{% if current_route == '' %}text-primary-emphasis{% endif %}"
+                class="{% if current_route == '/relational_schema/' %}text-primary-emphasis{% endif %}"
               >
                 Relational Schema
               </div>
