@@ -1,9 +1,10 @@
---create database LIC;
+create database LIC;
+
 CREATE TABLE Policy (
     policy_id int primary key,
-    policy_name varchar(100),
-    policy_type varchar(100),
-    description varchar(100)
+    policy_name varchar(30),
+    policy_type varchar(30),
+    description varchar(10000)
 );
 
 CREATE TABLE Person (
@@ -68,13 +69,13 @@ CREATE TABLE Online_account (
     email varchar(100)
 );
 
-create table Verification(
+CREATE TABLE Verification (
     person_id int references Person(person_id),
-    adhar_number int,
-    pan_number int,
-    driving_license int,
-    bank_account int,
-    phone_number int
+    adhar_number bigint NOT NULL,
+    pan_number bigint,
+    driving_license bigint,
+    bank_account bigint,
+    phone_number bigint
 );
 
 create table Employee(

@@ -17,11 +17,11 @@
 <script>
   const qna = [
     {
-      question: "To Search for Policies by Policy Type: 'Endowment Plan",
+      question: "To Search for Policies by Policy Type: 'Endowment Plan'",
       query: "SELECT * from Policy where policy_type='Endowment Plan';",
     },
     {
-      question: "Search for Policy Holders by Status:",
+      question: "Search for Policy Holders whose Status is Active",
       query: "SELECT * from policy_holder where status='Active';",
     },
     {
@@ -34,36 +34,26 @@
     },
     {
       question: "Search for all Transactions in Year 2022",
-      query: "SELECT * from transaction where transactionDate between '2021-12-31' and '2023-01-01'",
+      query: "SELECT * from transaction where transactionDate between '2022-01-01' and '2022-12-31'",
     },
     {
       question:
-        "Retrieve the name and relation of policy_holder='100'",
-      query: "SELECT p.first_name, p.last_name, b.relation_with_holder FROM Person p JOIN Beneficiary b ON p.person_id = b.person_id WHERE b.pid = 100;",
+        "Retrieve the name and relation of policy_holder=100",
+      query: "SELECT p.first_name as First_Name, p.last_name as Last_Name, b.relation_with_holder as Relation FROM Person p JOIN Beneficiary b ON p.person_id = b.person_id WHERE b.pid = 100;",
     },
     {
-      question: "List the policies that are of type 'Whole Life Plan'.",
-      query: "SELECT * from movie",
-    },
-    {
-      question:
-        "Retrieve the policies that have been claimed in the last two years.",
-      query: "SELECT * from movie",
+      question: "List the name of all Employees who work in Dharwad.",
+      query: "SELECT p.first_name as First_Name,p.last_name as Last_Name FROM Person p join Employee e on p.person_id=e.person_id join Works w on w.eid=e.eid join Branch b on b.branch_id=w.branch_id WHERE b.city = 'Dharwad';"
     },
     {
       question:
-        "List the policies that have a policy term of 20 years or more.",
-      query: "SELECT * from movie",
+        "List the name of all the People who have an online account in LIC",
+      query: "SELECT p.first_name as First_Name, p.last_name as Last_Name FROM Person p WHERE p.person_id IN (SELECT a.person_id FROM Online_account a);",
     },
     {
       question:
-        "List the policies that have been active for more than five years.",
-      query: "SELECT * from movie",
-    },
-    {
-      question:
-        "Which employee is working in this branch and who is the Manager",
-      query: "SELECT * from actor",
+        "Find the details of the People who live in Mumbai",
+      query: "SELECT * FROM Person WHERE city = 'Mumbai';",
     },
   ]
 
