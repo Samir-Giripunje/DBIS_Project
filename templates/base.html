@@ -81,12 +81,12 @@
               </div>
             </a>
             <a
-              class="nav-link {% if current_route == '' %}active{% endif %}"
-              href="#"
+              class="nav-link {% if current_route == '/transactions/' %}active{% endif %}"
+              href="{{ url_for('transac') }}"
               ><div
-                class="{% if current_route == '' %}text-primary-emphasis{% endif %}"
+                class="{% if current_route == '/transactions/' %}text-primary-emphasis{% endif %}"
               >
-                About
+                Transactions
               </div>
             </a>
           </div>

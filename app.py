@@ -48,6 +48,17 @@ def show_rs():
     return render_template('relational_schema.html', current_route=current_route)
 
 
+@app.route('/transactions/')
+def transac():
+    current_route = request.path
+    return render_template('transactions.html', current_route=current_route)
+
+
+@app.route('/transactions/ex1')
+def ex1():
+    return render_template('transactions/example_01.html')
+
+
 @app.route('/sqlquery')
 def run_query():
     sql_query = request.args.get('query')
