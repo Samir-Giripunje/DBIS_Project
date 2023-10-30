@@ -7,9 +7,9 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 
 db_config = {
     "host": "localhost",
-    "database": "moviedb",
+    "database": "lic",
     "user": "postgres",
-    "password": "123456",
+    "password": "sadock",
     "port": 5432
 }
 
