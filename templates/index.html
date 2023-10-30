@@ -34,7 +34,7 @@
     },
     {
       question: "Search for all Transactions in Year 2022",
-      query: "SELECT * from transaction where transactionDate between '2021-12-31' and '2023-01-01'",
+      query: "SELECT * from transaction where transactionDate between '2022-01-01' and '2022-12-31'",
     },
     {
       question:
@@ -47,13 +47,8 @@
     },
     {
       question:
-        "List the policies that have a policy term of 20 years or more.",
-      query: "SELECT * FROM Policy WHERE policy_term >= 20;",
-    },
-    {
-      question:
         "List the name of all the People who have an online account in LIC",
-      query: "SELECT p.first_name as First_Name, p.last_name as Last Name FROM Person p WHERE p.person_id IN (SELECT a.person_id FROM Online_account a);",
+      query: "SELECT p.first_name as First_Name, p.last_name as Last_Name FROM Person p WHERE p.person_id IN (SELECT a.person_id FROM Online_account a);",
     },
     {
       question:
