@@ -85,73 +85,89 @@ VALUES
   (8, 'Ravi', 'Mishra', 'M', 48, '1975-11-30', '567 Pine St', 'Madhya Pradesh', 462001, 'Bhopal', 'India'),
   (9, 'Preeti', 'Gupta', 'F', 29, '1994-08-07', '890 Cedar St', 'Uttar Pradesh', 226001, 'Kanpur', 'India'),
   (10, 'Amit', 'Gupta', 'M', 31, '1992-03-22', '890 Cedar St', 'Uttar Pradesh', 226001, 'Kanpur', 'India'),
-  (11, 'Deepak', 'Patel', 'M', 37, '1986-06-19','234 Birch St', 'Gujarat', 380001, 'Ahmedabad', 'India'),
-  (12, 'Anjali', 'Patel', 'F', 35, '1988-09-05','234 Birch St', 'Gujarat', 380001, 'Ahmedabad', 'India'),
-  (13, 'Raj', 'Shah', 'M', 32, '345 Redwood St','Karnataka', 560001, 'Bangalore', 'India'),
-  (14, 'Anjali', 'Kapoor', 'F', 26, '345 Redwood St','Karnataka', 560001, 'Bangalore', 'India'),
-  (15, 'Ajay', 'Singh', 'M', 60, '1963-06-21','678 Willow St','Maharashtra', 400001, 'Mumbai', 'India'),
-  (16, 'Pooja', 'Kumari', 'F', 21, '2002-02-14', '456 Cedar St', 'Uttar Pradesh', 201001, 'Noida', 'India'),
-  (17, 'Rahul', 'Raj', 'M', 20, '2003-06-22','789 Sunflower St', 'Kerala', 682001, 'Kochi', 'India'),
-  (18, 'Samir', 'Giripunje', 'M', 22, '2001-10-01','234 River View St', 'Punjab', 160001, 'Chandigarh', 'India'),
-  (19, 'Vedant', 'Ghonge', 'M', 22, '567 Green Park St','Uttarakhand', 248001, 'Dehradun', 'India'),
-  (20, 'Sadock', 'Chakma', 'M', 21, '2001-12-22','123 Hillside St', 'Tamil Nadu', 600001, 'Chennai', 'India'),
-  (21, 'Udayansh', 'Khandelwal', 'M', 21, '2002-09-29','456 Skyline St', 'Punjab', 143001, 'Amritsar', 'India'),
-  (22, 'Vishal', 'Sharma', 'M', 42, '1981-02-18','890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
-  (23, 'Shivam', 'Sharma', 'M', 19, '2004-01-15', '890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
-  (24, 'Arjun', 'Sharma', 'M', 16, '2007-10-29', '890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
-  (25, 'Kanhaiya', 'Kumar', 'M', 52, '1971-03-26', '345 Orchid St', 'Uttar Pradesh', 226002, 'Lucknow', 'India'),
-  (26, 'Adithya', 'Narayan', 'M', 22, '2001-02-18', '678 Sunset St', 'Karnataka', 560002, 'Bangalore', 'India'),
-  (27, 'Aditya', 'Kalyani', 'M', 32, '1991-05-15','123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India'),
-  (28, 'Samriddha', 'Chattopadhyay', 'M', 39, '1984-09-15','456 Riverfront St', 'West Bengal', 700002, 'Kolkata', 'India'),
-  (29, 'Monika', 'Kalyani', 'F', 28, '1995-03-17','123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India'),
-  (30, 'Mohit', 'Kalyani', 'M', 10, '2014-12-30','123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India');
+  (11, 'Deepak', 'Patel', 'M', 37, '1986-06-19', '234 Birch St', 'Gujarat', 380001, 'Ahmedabad', 'India'),
+  (12, 'Anjali', 'Patel', 'F', 35, '1988-09-05', '234 Birch St', 'Gujarat', 380001, 'Ahmedabad', 'India'),
+  (13, 'Raj', 'Shah', 'M', 32, '1988-09-05', '345 Redwood St', 'Karnataka', 560001, 'Bangalore', 'India'),
+  (14, 'Anjali', 'Kapoor', 'F', 26, '1988-09-05', '345 Redwood St', 'Karnataka', 560001, 'Bangalore', 'India'),
+  (15, 'Ajay', 'Singh', 'M', 60, '1988-09-05', '678 Willow St', 'Maharashtra', 400001, 'Mumbai', 'India'),
+  (16, 'Pooja', 'Kumari', 'F', 21, '1988-09-05', '456 Cedar St', 'Uttar Pradesh', 201001, 'Noida', 'India'),
+  (17, 'Rahul', 'Raj', 'M', 20, '1988-09-05', '789 Sunflower St', 'Kerala', 682001, 'Kochi', 'India'),
+  (18, 'Samir', 'Giripunje', 'M', 22, '1988-09-05', '234 River View St', 'Punjab', 160001, 'Chandigarh', 'India'),
+  (19, 'Vedant', 'Ghonge', 'M', 22, '1988-09-05', '567 Green Park St', 'Uttarakhand', 248001, 'Dehradun', 'India'),
+  (20, 'Sadock', 'Chakma', 'M', 21, '1988-09-05', '123 Hillside St', 'Tamil Nadu', 600001, 'Chennai', 'India'),
+  (21, 'Udayansh', 'Khandelwal', 'M', 21, '1988-09-05', '456 Skyline St', 'Punjab', 143001, 'Amritsar', 'India'),
+  (22, 'Vishal', 'Sharma', 'M', 42, '1988-09-05', '890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
+  (23, 'Shivam', 'Sharma', 'M', 19, '1988-09-05', '890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
+  (24, 'Arjun', 'Sharma', 'M', 16, '1988-09-05', '890 Lakeside St', 'Andhra Pradesh', 500001, 'Hyderabad', 'India'),
+  (25, 'Kanhaiya', 'Kumar', 'M', 52, '1988-09-05', '345 Orchid St', 'Uttar Pradesh', 226002, 'Lucknow', 'India'),
+  (26, 'Adithya', 'Narayan', 'M', 22, '1988-09-05', '678 Sunset St', 'Karnataka', 560002, 'Bangalore', 'India'),
+  (27, 'Aditya', 'Kalyani', 'M', 32, '1988-09-05', '123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India'),
+  (28, 'Samriddha', 'Chattopadhyay', 'M', 39, '1988-09-05', '456 Riverfront St', 'West Bengal', 700002, 'Kolkata', 'India'),
+  (29, 'Monika', 'Kalyani', 'F', 28, '1988-09-05', '123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India'),
+  (30, 'Mohit', 'Kalyani', 'M', 10, '1988-09-05', '123 Liberty St', 'Maharashtra', 400002, 'Mumbai', 'India');
+
 
 ------------------------------Branch------------------------------------- 
 --LINK -
 Insert into Branch (branch_id,branch_name,street_address,city,pincode,state,country) VALUES
-(101,'Madikeri',"Race Course Road, P B No.6, Madikeri",'Athani',571201,'Karnataka','India'),
+(101,'Madikeri','Race Course Road, P B No.6, Madikeri','Athani',571201,'Karnataka','India'),
 (102,'Mudhol','LIC of India, Ranna Circle, Mudhol','Bagalkot',587313,'Karnataka','India'),
 (103,'Saundatti','Saugandhipura, Dharwad Road, Saundatti','Belagavi',591126,'Karnataka','India'),
-(104,'Raibag',"Sankapal Building, Main Road, Raibag",'Belagavi',591317,'Karnataka','India'),
+(104,'Raibag','Sankapal Building, Main Road, Raibag','Belagavi',591317,'Karnataka','India'),
 (105,'White Field Main Road','Above Syndicate Bank Floor, White Field Main Road, Bangalore','Bengaluru',560066,'Karnataka','India'),
-(106,'Kasturba Road',"Mg Road Br, 3rdrd Floor, C.Kiran Bldg, Kasturba Road, Bangalore",'Bengaluru',560001,'Karnataka','India'),
-(107,'Navalgund',"LIC Building, New Anand Flour Mills, Gadag Road, Navalgund",'Dharwad',582208,'Karnataka','India'),
+(106,'Kasturba Road','Mg Road Br, 3rdrd Floor, C.Kiran Bldg, Kasturba Road, Bangalore','Bengaluru',560001,'Karnataka','India'),
+(107,'Navalgund','LIC Building, New Anand Flour Mills, Gadag Road, Navalgund','Dharwad',582208,'Karnataka','India');
 -- LINK - https://www.insurance21.in/branch-locator/lic-branches-in-karnataka.html
 ----------------------------Policy_Holder---------------------------------
+--ADJUST THE END_DATE ACCORDING TO THE POLICY MATURITY_AGE also change the policy_id----
 INSERT INTO Policy_Holder (pid,policy_id,person_id,start_date,end_date,status) VALUES
-()
+ (100, 860, 1, '2020-01-01', '2024-01-01', 'Active'),
+  (101, 864, 2, '2015-02-01', '20xx-02-01', 'Active'),
+  (102, 30, 27, '2017-03-01', '2024-03-01', 'Active'),
+  (103,XX,8,'2015-10-06','XXXXXX','Inactive'),
+  (104,xx,15,'2010-06-10','xxxxxx','Inactive'),
+  (105,xx,25,'2001-07-15','','Inactive'),
+  (106,xx,20,'2023-07-13','','Active'),
+  (107,xx,21,'2023-08-01','','Active'),
+  (108,xx,14,'2019-02-10','','Inactive'),
+  (109,xx,5,'2017-09-18','','Inactive');
 ----------------------------Transaction------------------------------------
 INSERT INTO transaction (transaction_ID,pid,transactionType,amount,description,transactionDate,transactionTime) VALUES
-(10000, 1, 'Premium Payment', 500, 'Monthly Premium', '2022-9-25', '14:30:00'),
-(10001, 19, 'Premium Payment', 250, 'Monthly Premium', '2022-10-01', '17:45:20'),
-(10002, 22, 'Claim Payout', 10000, 'XYZ(FILL THIS UP) Claim', '2022-10-25', '09:15:45'),
-(10003, 1, 'Premium Payment', 500, 'Monthly Premium', '2022-10-25', '14:30:00'), 
-(10004, 1, 'Policy Renewal', 750, 'Policy Renewal Fee', '2022-10-27', '11:20:30'),
-(10005, 2, 'Premium Payment', 2000, 'Monthly Premium', '2022-10-30', '14:30:00'),
-(10006, 19, 'Premium Payment', 250, 'Monthly  Premium', '2022-11-01', '10:14:29'),
-(10007, 1, 'Premium Payment', 500, 'Monthly  Premium', '2022-11-25', '12:30:25'),
-(10008, 19, 'Premium Payment', 250, 'Monthly  Premium', '2022-12-01', '12:46:30'),
-(10009, 26, 'Policy Renewal', 1000, 'Policy Renewal Fee', '2022-12-02', '10:45:12'),
-(10010, 5, 'Claim Payout', 50000,  'XYZ(FILL THIS UP) Claim', '2022-12-08', '17:45:20'),
-(10011, 22, 'Claim Payout', 10000, 'Accident Claim', '2022-12-12', '09:15:45'), 
-(10012, 1, 'Premium Payment', 500, 'Monthly  Premium', '2022-12-25', '15:19:45'),
-(10008, 19, 'Premium Payment', 250, 'Monthly  Premium', '2023-01-01', '18:37:21'),
-(10013, 20, 'Claim Payout', 30000, 'XYZ(FILL THIS UP) Claim', '2023-01-15', '12:30:45'),
-(10014, 15, 'Online Payment', 200, 'Applying for new Policy', '2023-01-18', '11:20:30'),
-(10015, 1, 'Premium Payment', 500, 'Monthly  Premium', '2023-01-25', '10:22:42'),
-(10016, 18, 'Online Payment', 200, 'Applying for new Policy', '2023-01-25', '11:25:32'),
-(10017, 19, 'Premium Payment', 250, 'Monthly  Premium', '2023-02-01', '12:30:21'),
-(10018, 12, 'Claim Payout', 5000, 'XYZ(FILL THIS UP) Claim', '2023-02-08', '15:16:16'),
-(10019, 16, 'Online Payment', 500, 'Applying for new Policy', '2023-02-12', '15:10:02'),
-(10020, 1, 'Premium Payment', 500, 'Monthly  Premium', '2023-02-25', '11:30:02');
+(10000, 100, 'Premium Payment', 500, 'Monthly Premium', '2022-9-25', '14:30:00'),
+(10001, 101, 'Premium Payment', 250, 'Monthly Premium', '2022-10-01', '17:45:20'),
+(10002, 103, 'Claim Payout', 10000, 'XYZ(FILL THIS UP) Claim', '2022-10-25', '09:15:45'),
+(10003, 100, 'Premium Payment', 500, 'Monthly Premium', '2022-10-25', '14:30:00'), 
+(10004, 100, 'Policy Renewal', 750, 'Policy Renewal Fee', '2022-10-27', '11:20:30'),
+(10005, 101, 'Premium Payment', 2000, 'Monthly Premium', '2022-10-30', '14:30:00'),
+(10006, 106, 'Premium Payment', 250, 'Monthly  Premium', '2022-11-01', '10:14:29'),
+(10007, 100, 'Premium Payment', 500, 'Monthly  Premium', '2022-11-25', '12:30:25'),
+(10008, 106, 'Premium Payment', 250, 'Monthly  Premium', '2022-12-01', '12:46:30'),
+(10009, 108, 'Policy Renewal', 1000, 'Policy Renewal Fee', '2022-12-02', '10:45:12'),
+(10010, 104, 'Claim Payout', 50000,  'XYZ(FILL THIS UP) Claim', '2022-12-08', '17:45:20'),
+(10011, 109, 'Claim Payout', 10000, 'Accident Claim', '2022-12-12', '09:15:45'), 
+(10012, 100, 'Premium Payment', 500, 'Monthly  Premium', '2022-12-25', '15:19:45'),
+(10013, 106, 'Premium Payment', 250, 'Monthly  Premium', '2023-01-01', '18:37:21'),
+(10014, 105, 'Claim Payout', 30000, 'XYZ(FILL THIS UP) Claim', '2023-01-15', '12:30:45'),
+(10015, 108, 'Online Payment', 200, 'Applying for new Policy', '2023-01-18', '11:20:30'),
+(10016, 100, 'Premium Payment', 500, 'Monthly  Premium', '2023-01-25', '10:22:42'),
+(10017, 106, 'Premium Payment', 250, 'Monthly  Premium', '2023-02-01', '12:30:21'),
+(10018, 108, 'Online Payment', 500, 'Applying for new Policy', '2023-02-12', '15:10:02'),
+(10019, 100, 'Premium Payment', 500, 'Monthly  Premium', '2023-02-25', '11:30:02');
 -----------------------Beneficiary--------------------------
 INSERT INTO Beneficiary(pid,person_id,relation_with_holder) VALUES
-(,3,'Son'),
-(,3,'Son'),
-()
+(100,3,'Son'),
+(101,3,'Son'),
+(102,30,'Son'),
+(104,16,'Wife');
 -----------------------Claims-------------------------------
-INSERT INTO Claims(pid,claim_type,claim_description) VALUES
-()
+-- Insert data into the Claims table/ Random datas for now
+INSERT INTO Claims (pid, claim_type, claim_description) VALUES
+  (100, 'Death', "Claim filed due to the policyholder\'s demise"),
+  (101, 'Hospitalization', 'Claim for hospitalization expenses'),
+  (102, 'Accident', 'Claim for injuries sustained in an accident'),
+  (103, 'Critical Illness', 'Claim for critical illness treatment'),
+  (104, 'Property Damage', 'Claim for property damage due to a covered event');
+
 ----------------------Online_account-------------------------------
 INSERT INTO Online_account( person_id,username,password,email) VALUES
 (1, 'Amit Sharma','Sharmaji','1234567890','amitsharma@gmail.com'),
@@ -198,4 +214,9 @@ INSERT INTO Works(eid,branch_id) VALUES
 (1014,106);
 
 ----------------Manager----------------------------------------
-INSERT INTO Manager() VALUES
+INSERT INTO Manager(eid,person_id) VALUES
+(1001,28),
+(102,26),
+(1012,12),
+(1013,8),
+(1014,5);

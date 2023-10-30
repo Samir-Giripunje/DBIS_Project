@@ -31,8 +31,8 @@ CREATE TABLE Person (
 
 create table Branch(
 branch_id int primary key,
-branch_name varchar(20),
-street_address varchar(20),
+branch_name varchar(100),
+street_address varchar(100),
 city varchar(20),
 pincode int,
 state varchar(20),

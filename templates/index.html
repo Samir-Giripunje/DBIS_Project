@@ -17,29 +17,29 @@
 <script>
   const qna = [
     {
-      question: "Find the total coverage value for all active policies.",
-      query: "SELECT * from movie",
+      question: "To Search for Policies by Policy Type: 'Endowment Plan",
+      query: "SELECT * from Policy where policy_type='Endowment Plan';",
     },
     {
-      question: "Sort the agent according to the policies they sold policy",
-      query: "SELECT * from movie",
+      question: "Search for Policy Holders by Status:",
+      query: "SELECT * from policy_holder where status='Active';",
     },
     {
-      question: "Find the person(s) who hold the most policies.",
-      query: "SELECT * from movie",
+      question: "Search for Transactions by Transaction Type: Premium Payment",
+      query: "SELECT * FROM transaction WHERE transactionType = 'Premium Payment';",
     },
     {
-      question: "List the policies with entry ages between 25 and 35.",
-      query: "SELECT * from movie",
+      question: "Search for Branches in Bengaluru",
+      query: "SELECT * from Branch where city='Bengaluru';",
     },
     {
-      question: "Find the average coverage value for all active policies.",
-      query: "SELECT * from movie",
+      question: "Search for all Transactions in Year 2022",
+      query: "SELECT * from transaction where transactionDate between '2021-12-31' and '2023-01-01'",
     },
     {
       question:
-        "Retrieve the policies held by a specific person based on their person_id.",
-      query: "SELECT * from movie",
+        "Retrieve the name and relation of policy_holder='100'",
+      query: "SELECT p.first_name, p.last_name, b.relation_with_holder FROM Person p JOIN Beneficiary b ON p.person_id = b.person_id WHERE b.pid = 100;",
     },
     {
       question: "List the policies that are of type 'Whole Life Plan'.",
