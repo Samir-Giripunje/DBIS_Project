@@ -13,14 +13,14 @@
       <a href="{{ url_for('transac') }}">Transactions</a>
     </li>
     <li class="breadcrumb-item active" aria-current="page">
-      Adding a person to a policy
+      Adding a beneficiary to a policy
     </li>
   </ol>
 </nav>
 <div class="border border-secondary form-container">
-  <form hx-post="/transaction1" hx-target="#response-ex1" hx-swap="innerHTM">
+  <form hx-post="/transaction2" hx-target="#response-ex2" hx-swap="innerHTML">
     <div class="mb-3">
-      <label for="person_id" class="form-label">Person ID</label>
+      <label for="person_id" class="form-label">Beneficiary's Person ID</label>
       <input type="text" class="form-control" name="person_id" id="person_id" />
     </div>
     <div class="mb-3">
@@ -28,31 +28,14 @@
       <input type="text" class="form-control" name="policy_id" id="policy_id" />
     </div>
     <div class="mb-3">
-      <label for="start_date" class="form-label">Start Date</label>
-      <input
-        type="date"
-        class="form-control"
-        name="start_date"
-        id="start_date"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="end_date" class="form-label">End Date</label>
-      <input type="date" class="form-control" name="end_date" id="end_date" />
-    </div>
-    <div>
-      <input
-        type="text"
-        value="Active"
-        class="form-control"
-        name="status"
-        id="status"
-        style="display: none"
-      />
+      <label for="relation" class="form-label"
+        >Relation with policy holder</label
+      >
+      <input type="text" class="form-control" name="relation" id="relation" />
     </div>
     <div class="mt-4">
       <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="reset" id="reset-ex1" class="btn btn-secondary ml-4">
+      <button type="reset" id="reset-ex2" class="btn btn-secondary ml-4">
         Reset
       </button>
     </div>
@@ -60,11 +43,11 @@
 </div>
 <div class="mt-2 form-container">
   <h4>Response:</h4>
-  <div id="response-ex1"></div>
+  <div id="response-ex2"></div>
 </div>
 <script>
-  const response = document.getElementById("response-ex1")
-  const reset = document.getElementById("reset-ex1")
+  const response = document.getElementById("response-ex2")
+  const reset = document.getElementById("reset-ex2")
   reset.addEventListener("click", () => {
     response.innerHTML = ""
   })

@@ -14,7 +14,7 @@
 
 
 -- Endowment Plans
-INSERT INTO Policy (policy_id, policy_name, policy_type, description,requirements,coverage,premium,entry_age,maturity_age,policy_term)
+INSERT INTO Policy (policy_id, policy_name, policy_type, description)
 VALUES
     (860, 'LIC''s Bima Jyoti', 'Endowment Plan', 'Endowment plan with returns'),
     (864, 'LIC''s Bima Ratna', 'Endowment Plan', 'Comprehensive endowment policy'),
@@ -31,19 +31,19 @@ VALUES
 
 
 -- Whole Life Plans
-INSERT INTO Policy (policy_id, policy_name, policy_type, description,requirements,coverage,premium,entry_age,maturity_age,policy_term)
+INSERT INTO Policy (policy_id, policy_name, policy_type, description)
 VALUES
     (945, 'LIC''s Jeevan Umang', 'Whole Life Plan', 'Whole life plan with returns');
 
 
 -- Money Back Plans
-INSERT INTO Policy (policy_id, policy_name, policy_type, description,requirements,coverage,premium,entry_age,maturity_age,policy_term)
+INSERT INTO Policy (policy_id, policy_name, policy_type, description)
 VALUES
     (863, 'LIC''s Dhan Rekha', 'Money Back Plan', 'Money back plan with returns'),
     (916, 'LIC''s New Bima Bachat', 'Money Back Plan', 'Money back policy with savings'),
     (920, 'LIC''s NEW MONEY BACK PLAN - 20 YEARS', 'Money Back Plan', 'Money back policy for 20 years'),
     (921, 'LIC’s NEW MONEY BACK PLAN - 25 YEARS', 'Money Back Plan', 'Money back policy for 25 years'),
-    (945, 'LIC''s Jeevan Uman', 'Money Back Plan', 'Money back plan with returns'),
+    (941, 'LIC''s Jeevan Uman', 'Money Back Plan', 'Money back plan with returns'),
     (932, 'LIC''s NEW CHILDREN''S MONEY BACK PLAN', 'Money Back Plan', 'Money back plan for children'),
     (934, 'LIC''s Jeevan Tarun', 'Money Back Plan', 'Money back plan for young individuals'),
     (947, 'LIC''s Jeevan Shiromani', 'Money Back Plan', 'Money back plan for premium payers'),
@@ -51,7 +51,7 @@ VALUES
 
 
 -- Term Assurance Plans
-INSERT INTO Policy (policy_id, policy_name, policy_type, description,requirements,coverage,premium,entry_age,maturity_age,policy_term)
+INSERT INTO Policy (policy_id, policy_name, policy_type, description)
 VALUES
     (954, 'LIC''s New TECH TERM', 'Term Assurance Plan', 'Technical term assurance policy'),
     (955, 'LIC''s New Jeevan Amar', 'Term Assurance Plan', 'Jeevan Amar term assurance policy'),
@@ -61,7 +61,7 @@ VALUES
 
 
 -- Riders
-INSERT INTO Policy (policy_id, policy_name, policy_type, description,requirements,coverage,premium,entry_age,maturity_age,policy_term)
+INSERT INTO Policy (policy_id, policy_name, policy_type, description)
 VALUES
     (11, 'LIC''s Linked Accidental Death Benefit Rider', 'Rider', 'Linked accidental death benefit rider'),
     (12, 'LIC''s Accidental Death and Disability Benefit Rider', 'Rider', 'Accidental death and disability benefit rider'),
@@ -154,14 +154,13 @@ INSERT INTO transaction (transaction_ID,pid,transactionType,amount,description,t
 (10019, 100, 'Premium Payment', 500, 'Monthly  Premium', '2023-02-25', '11:30:02');
 -----------------------Beneficiary--------------------------
 INSERT INTO Beneficiary(pid,person_id,relation_with_holder) VALUES
-(100,3,'Son'),
 (101,3,'Son'),
 (102,30,'Son'),
 (104,16,'Wife');
 -----------------------Claims-------------------------------
 -- Insert data into the Claims table/ Random datas for now
 INSERT INTO Claims (pid, claim_type, claim_description) VALUES
-  (100, 'Death', "Claim filed due to the policyholder\'s demise"),
+  (100, 'Death', 'Claim filed due to the policyholder demise'),
   (101, 'Hospitalization', 'Claim for hospitalization expenses'),
   (102, 'Accident', 'Claim for injuries sustained in an accident'),
   (103, 'Critical Illness', 'Claim for critical illness treatment'),
@@ -215,7 +214,6 @@ INSERT INTO Works(eid,branch_id) VALUES
 ----------------Manager----------------------------------------
 INSERT INTO Manager(eid,person_id) VALUES
 (1001,28),
-(102,26),
 (1012,12),
 (1013,8),
 (1014,5);

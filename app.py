@@ -9,7 +9,7 @@ db_config = {
     "host": "localhost",
     "database": "lic",
     "user": "postgres",
-    "password": "sadock",
+    "password": "123456",
     "port": 5432
 }
 
@@ -59,6 +59,11 @@ def ex1():
     return render_template('transactions/example_01.html')
 
 
+@app.route('/transactions/ex2')
+def ex2():
+    return render_template('transactions/example_02.html')
+
+
 @app.route('/sqlquery')
 def run_query():
     sql_query = request.args.get('query')
@@ -83,6 +88,76 @@ def run_query():
             return f"<div class='alert alert-danger'>Error executing the query: {str(e)}</div>"
     else:
         return "No query provided."
+
+
+@app.route('/transaction1', methods=['POST'])
+def run_ex1():
+    try:
+        # Retrieve data from the form
+        person_id = request.form['person_id']
+        policy_id = request.form['policy_id']
+        start_date = request.form['start_date']
+        end_date = request.form['end_date']
+        status = request.form['status']
+
+        # Connect to the database
+        connection = psycopg2.connect(**db_config)
+        cursor = connection.cursor()
+
+        # Begin a transaction
+        connection.autocommit = False
+        cursor.execute("BEGIN;")
+
+        # Insert the data into a table (replace 'your_table' with your actual table name)
+        cursor.execute("INSERT INTO Policy_Holder (policy_id, person_id, start_date, end_date, status) VALUES (%s, %s, %s, %s, %s);",
+                       (person_id, policy_id, start_date, end_date, status))
+
+        # Commit the transaction
+        connection.commit()
+
+        return "<div class='alert alert-success'>Data successfully added.</div>"
+
+    except Exception as e:
+        connection.rollback()
+        return f"<div class='alert alert-danger'>Error adding data to the database:\n {str(e)}</div>"
+
+    finally:
+        connection.autocommit = True
+        connection.close()
+
+
+@app.route('/transaction2', methods=['POST'])
+def run_ex2():
+    try:
+        # Retrieve data from the form
+        person_id = request.form['person_id']
+        policy_id = request.form['policy_id']
+        relation = request.form['relation']
+
+        # Connect to the database
+        connection = psycopg2.connect(**db_config)
+        cursor = connection.cursor()
+
+        # Begin a transaction
+        connection.autocommit = False
+        cursor.execute("BEGIN;")
+
+        # Insert the data into a table (replace 'your_table' with your actual table name)
+        cursor.execute("INSERT INTO Beneficiary(pid, person_id, relation_with_holder) VALUES (%s, %s, %s);",
+                       (person_id, policy_id, relation))
+
+        # Commit the transaction
+        connection.commit()
+
+        return "<div class='alert alert-success'>Data successfully added.</div>"
+
+    except Exception as e:
+        connection.rollback()
+        return f"<div class='alert alert-danger'>Error adding data to the database:\n {str(e)}</div>"
+
+    finally:
+        connection.autocommit = True
+        connection.close()
 
 
 if __name__ == '__main__':

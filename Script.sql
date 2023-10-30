@@ -1,16 +1,9 @@
-create database LIC;
-
+--create database LIC;
 CREATE TABLE Policy (
     policy_id int primary key,
-    policy_name varchar(30),
-    policy_type varchar(30),
-    description varchar(100),
-    requirements varchar(100),
-    coverage int,
-    premium int,
-    entry_age int,
-    maturity_age int,
-    policy_term int
+    policy_name varchar(100),
+    policy_type varchar(100),
+    description varchar(100)
 );
 
 CREATE TABLE Person (
@@ -49,9 +42,9 @@ create table Policy_Holder(
 create table transaction(
     transaction_ID int,
     pid int references Policy_Holder(pid),
-    transactionType varchar(20),
+    transactionType varchar(40),
     amount int,
-    description varchar(20),
+    description varchar(40),
     transactionDate Date,
     transactionTime Time
 );
