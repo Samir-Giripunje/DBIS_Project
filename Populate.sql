@@ -169,16 +169,16 @@ INSERT INTO Claims (pid, claim_type, claim_description) VALUES
 
 ----------------------Online_account-------------------------------
 INSERT INTO Online_account( person_id,username,password,email) VALUES
-(1, 'Amit Sharma','Sharmaji','1234567890','amitsharma@gmail.com'),
-(3, 'Rahul Verma','Rahul0922','sbajdbsddfsjdsmf','rahul0922@gmail.com'),
-(20, 'Sadock Chakma','ChakmaSadock','sdfbufsdguewgf','sadockhakma@gmail.com'),
-(10, 'Amit Gupta','amitGupta','kdsfnbsdafhuisdf','amitgupta@gmail.com'),
-(18,'Samir Giripunje','Samir01','hsdfjubfcdu','samirgiripunjee@gmail.com'),
-(19,'Vedant Ghonge','Vedant007','sjdaishafiewdf','vedant007@gmail.com'),
-(29,'Monika Kalyani','Monika','sdfhisfauidf','monika@gmail.com'),
-(27,'Aditya Kalyani','adityakalyani','i3r2fhciw','adityakalyani@gmail.com'),
-(25,'Kanhaiya Kumar','Kanhaiya','hewufewd','kanhaya@gmail.com'),
-(13,'Raj Shah','Raj','0312uijwd','RajShah@gmail.com');
+(1, 'Amit Sharma','1234567890','amitsharma@gmail.com'),
+(3, 'Rahul Verma','sbajdbsddfsjdsmf','rahul0922@gmail.com'),
+(20, 'Sadock Chakma','sdfbufsdguewgf','sadockhakma@gmail.com'),
+(10, 'Amit Gupta','kdsfnbsdafhuisdf','amitgupta@gmail.com'),
+(18,'Samir Giripunje','hsdfjubfcdu','samirgiripunjee@gmail.com'),
+(19,'Vedant Ghonge','sjdaishafiewdf','vedant007@gmail.com'),
+(29,'Monika Kalyani','sdfhisfauidf','monika@gmail.com'),
+(27,'Aditya Kalyani','i3r2fhciw','adityakalyani@gmail.com'),
+(25,'Kanhaiya Kumar','hewufewd','kanhaya@gmail.com'),
+(13,'Raj Shah','0312uijwd','RajShah@gmail.com');
 ----------------------Employee-----------------------------------
 Insert INTO Employee(eid,person_id) VALUES
 (1001,28),
@@ -215,7 +215,7 @@ INSERT INTO Works(eid,branch_id) VALUES
 ----------------Manager----------------------------------------
 INSERT INTO Manager(eid,person_id) VALUES
 (1001,28),
-(102,26),
+(1002,26),
 (1012,12),
 (1013,8),
 (1014,5);

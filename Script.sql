@@ -76,12 +76,12 @@ CREATE TABLE Online_account (
 );
 
 create table Verification(
-    person_id int references Person(person_id),
-    adhar_number int,
-    pan_number int,
-    driving_license int,
-    bank_account int,
-    phone_number int
+person_id int references Person(person_id),
+adhar_number int ,
+pan_number int,
+driving_license int,
+bank_account int,
+phone_number int
 );
 
 create table Employee(
