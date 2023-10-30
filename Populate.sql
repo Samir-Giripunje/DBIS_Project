@@ -118,8 +118,13 @@ Insert into Branch (branch_id,branch_name,street_address,city,pincode,state,coun
 (107,'Navalgund',"LIC Building, New Anand Flour Mills, Gadag Road, Navalgund",'Dharwad',582208,'Karnataka','India'),
 -- LINK - https://www.insurance21.in/branch-locator/lic-branches-in-karnataka.html
 ----------------------------Policy_Holder---------------------------------
+--ADJUST THE END_DATE ACCORDING TO THE POLICY MATURITY_AGE also change the policy_id----
 INSERT INTO Policy_Holder (pid,policy_id,person_id,start_date,end_date,status) VALUES
-()
+ (100, 860, 1, '2020-01-01', '2024-01-01', 'Active'),
+  (101, 864, 2, '2015-02-01', '20xx-02-01', 'Active'),
+  (102, 30, 27, '2007-03-01', '2024-03-01', 'Active'),
+  (103,XX,42,'2005-10-06','XXXXXX','Inactive'),
+  (104,xx,15,'2010-06-10','xxxxxx','Inactive');
 ----------------------------Transaction------------------------------------
 INSERT INTO transaction (transaction_ID,pid,transactionType,amount,description,transactionDate,transactionTime) VALUES
 (10000, 1, 'Premium Payment', 500, 'Monthly Premium', '2022-9-25', '14:30:00'),
@@ -146,12 +151,19 @@ INSERT INTO transaction (transaction_ID,pid,transactionType,amount,description,t
 (10020, 1, 'Premium Payment', 500, 'Monthly  Premium', '2023-02-25', '11:30:02');
 -----------------------Beneficiary--------------------------
 INSERT INTO Beneficiary(pid,person_id,relation_with_holder) VALUES
-(,3,'Son'),
-(,3,'Son'),
-()
+(100,3,'Son'),
+(101,3,'Son'),
+(102,30,'Son'),
+(104,16,'Wife');
 -----------------------Claims-------------------------------
-INSERT INTO Claims(pid,claim_type,claim_description) VALUES
-()
+-- Insert data into the Claims table/ Random datas for now
+INSERT INTO Claims (pid, claim_type, claim_description) VALUES
+  (100, 'Death', "Claim filed due to the policyholder\'s demise"),
+  (101, 'Hospitalization', 'Claim for hospitalization expenses'),
+  (102, 'Accident', 'Claim for injuries sustained in an accident'),
+  (103, 'Critical Illness', 'Claim for critical illness treatment'),
+  (104, 'Property Damage', 'Claim for property damage due to a covered event');
+
 ----------------------Online_account-------------------------------
 INSERT INTO Online_account( person_id,username,password,email) VALUES
 (1, 'Amit Sharma','Sharmaji','1234567890','amitsharma@gmail.com'),
@@ -198,4 +210,9 @@ INSERT INTO Works(eid,branch_id) VALUES
 (1014,106);
 
 ----------------Manager----------------------------------------
-INSERT INTO Manager() VALUES
+INSERT INTO Manager(eid,person_id) VALUES
+(1001,28),
+(102,26),
+(1012,12),
+(1013,8),
+(1014,5);

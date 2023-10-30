@@ -9,7 +9,7 @@ db_config = {
     "host": "localhost",
     "database": "moviedb",
     "user": "postgres",
-    "password": "123456",
+    "password": "sadock",
     "port": 5432
 }
 
