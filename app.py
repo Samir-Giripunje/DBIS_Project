@@ -24,6 +24,23 @@ def execute_query(query):
     return result
 
 
+def create_table(result):
+    if result:
+        table_html = "<table class='table table-striped table-hover'><thrad><tr>"
+        for key in result[0].keys():
+            table_html += f"<th scope='col'>{key}</th>"
+        table_html += "</tr></thead>"
+        for row in result:
+            table_html += "<tr scope='row'>"
+            for key, value in row.items():
+                table_html += f"<td>{value}</td>"
+            table_html += "</tr>"
+        table_html += "</table>"
+        return table_html
+    else:
+        return "<div class='alert alert-success' >Query executed successfully, but there are no results to display.</div>"
+
+
 # ----------------------Backend Code-------------------------------------
 @app.route('/')
 def hello():
@@ -75,6 +92,12 @@ def ex3():
     return render_template('transactions/example_03.html')
 
 
+@app.route('/other_data/')
+def other():
+    current_route = request.path
+    return render_template('other_data.html', current_route=current_route)
+
+
 # --------------------------------Request Routes-------------------------------------------
 @app.route('/sqlquery')
 def run_query():
@@ -102,6 +125,36 @@ def run_query():
         return "No query provided."
 
 
+@app.route('/getPolicyData')
+def getPolicyData():
+    try:
+        policy_types = execute_query(
+            'SELECT policy_type FROM Policy GROUP BY policy_type')
+        policy_types = [row['policy_type'] for row in policy_types]
+        result = ""
+        result += f"<div class='accordion' id='policy_accordian'>"
+        for policy_type in policy_types:
+            modified_string = policy_type.replace(" ", "_")
+            result += f"<div class='accordion-item'>"
+            result += f"<h2 class 'accordion-header'>"
+            result += f"<button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#{modified_string}' aria-expanded='true' aria-controls='{modified_string}'>{policy_type}</button>"
+            result += f"</h2>"
+            result += f"<div id='{modified_string}' class='accordion-collapse collapse' data-bs-parent='#policy_accordian'>"
+            result += "<div class='accordion-body'>"
+
+            policies = execute_query(
+                f"SELECT * from Policy where policy_type = '{policy_type}'")
+            result += create_table(policies)
+            result += "</div>"
+            result += "</div>"
+            result += "</div>"
+
+        result += "</div>"
+        return result
+    except Exception as e:
+        return f"<div class='alert alert-danger'>Error executing the query: {str(e)}</div>"
+
+
 @app.route('/transaction1', methods=['POST'])
 def run_ex1():
     try:
@@ -122,7 +175,7 @@ def run_ex1():
 
         # Insert the data into a table (replace 'your_table' with your actual table name)
         cursor.execute("INSERT INTO Policy_Holder (policy_id, person_id, start_date, end_date, status) VALUES (%s, %s, %s, %s, %s);",
-                       (person_id, policy_id, start_date, end_date, status))
+                       (policy_id, person_id, start_date, end_date, status))
 
         # Commit the transaction
         connection.commit()

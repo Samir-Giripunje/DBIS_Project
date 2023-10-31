@@ -89,6 +89,15 @@
                 Transactions
               </div>
             </a>
+            <a
+              class="nav-link {% if current_route == '/other_data/' %}active{% endif %}"
+              href="{{ url_for('other') }}"
+              ><div
+                class="{% if current_route == '/other_data/' %}text-primary-emphasis{% endif %}"
+              >
+                Other data
+              </div>
+            </a>
           </div>
         </div>
       </div>
