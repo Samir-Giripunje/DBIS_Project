@@ -141,10 +141,12 @@ def getPolicyData():
             result += f"</h2>"
             result += f"<div id='{modified_string}' class='accordion-collapse collapse' data-bs-parent='#policy_accordian'>"
             result += "<div class='accordion-body'>"
+            result += "<div class='table-responsive'>"
 
             policies = execute_query(
                 f"SELECT * from Policy where policy_type = '{policy_type}'")
             result += create_table(policies)
+            result += "</div>"
             result += "</div>"
             result += "</div>"
             result += "</div>"
