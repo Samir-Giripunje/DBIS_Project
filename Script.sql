@@ -13,7 +13,7 @@ CREATE TABLE Person (
     gender varchar(1),
     age int,
     DOB date,
-    address varchar(100),
+    address varchar(1000),
     state varchar(20),
     pincode int,
     city varchar(20),

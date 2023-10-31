@@ -55,6 +55,11 @@ def transac():
     return render_template('transactions.html', current_route=current_route)
 
 
+@app.route('/transactions/add_person')
+def add_person():
+    return render_template('transactions/add_person.html')
+
+
 @app.route('/transactions/ex1')
 def ex1():
     return render_template('transactions/example_01.html')
@@ -194,6 +199,46 @@ def run_ex3():
                        (pid, transaction_type, amount, description, formatted_date, formatted_time))
 
         # Commit the transaction
+        connection.commit()
+
+        return "<div class='alert alert-success'>Data successfully added.</div>"
+
+    except Exception as e:
+        connection.rollback()
+        return f"<div class='alert alert-danger'>Error adding data to the database:\n {str(e)}</div>"
+
+    finally:
+        connection.autocommit = True
+        connection.close()
+
+
+@app.route('/addPerson', methods=['POST'])
+def addPerson():
+    try:
+        person_id = request.form['person_id']
+        fname = request.form['fname']
+        lname = request.form['lname']
+        gender = request.form['gender']
+        age = request.form['age']
+        dob = request.form['dob']
+        address = request.form['address']
+        state = request.form['state']
+        pin_code = request.form['pin_code']
+        city = request.form['city']
+        country = request.form['country']
+
+        current_date = datetime.date.today()
+        formatted_date = current_date.strftime("%Y-%m-%d")
+        current_time = datetime.datetime.now().time()
+        formatted_time = current_time.strftime("%H:%M:%S")
+
+        connection = psycopg2.connect(**db_config)
+        cursor = connection.cursor()
+
+        connection.autocommit = False
+        cursor.execute("BEGIN;")
+        cursor.execute("INSERT INTO Person (person_id, first_name, last_name, gender, age, DOB, address, state, pincode, city, country) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);",
+                       (person_id, fname, lname, gender, age, dob, address, state, pin_code, city, country))
         connection.commit()
 
         return "<div class='alert alert-success'>Data successfully added.</div>"
