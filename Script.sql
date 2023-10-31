@@ -1,9 +1,8 @@
-create database LIC;
-
+--create database LIC;
 CREATE TABLE Policy (
     policy_id int primary key,
-    policy_name varchar(30),
-    policy_type varchar(30),
+    policy_name varchar(50),
+    policy_type varchar(50),
     description varchar(10000)
 );
 
@@ -41,7 +40,7 @@ create table Policy_Holder(
 );
 
 create table transaction(
-    transaction_ID int,
+    transaction_ID SERIAL PRIMARY KEY,
     pid int references Policy_Holder(pid),
     transactionType varchar(40),
     amount int,
