@@ -10,7 +10,7 @@ db_config = {
     "host": "localhost",
     "database": "lic",
     "user": "postgres",
-    "password": "123456",
+    "password": "sadock",
     "port": 5432
 }
 
