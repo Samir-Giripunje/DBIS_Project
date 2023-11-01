@@ -1219,7 +1219,7 @@ VALUES
         103,
         'Claim Payout',
         10000,
-        'XYZ(FILL THIS UP) Claim',
+        'Hopitalization Claim',
         '2022-10-25',
         '09:15:45'
     ),
@@ -1291,7 +1291,7 @@ VALUES
         104,
         'Claim Payout',
         50000,
-        'XYZ(FILL THIS UP) Claim',
+        'Hopilization Claim',
         '2022-12-08',
         '17:45:20'
     ),
@@ -1327,7 +1327,7 @@ VALUES
         105,
         'Claim Payout',
         30000,
-        'XYZ(FILL THIS UP) Claim',
+        'Claimed',
         '2023-01-15',
         '12:30:45'
     ),
